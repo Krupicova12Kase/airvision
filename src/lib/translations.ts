@@ -24,7 +24,7 @@ export const t = {
     title: { cs: "O projektu", en: "About the Project" },
     p1: {
       cs: "Projekt AirVision se zabývá monitorováním zdravotního stavu alejí ve městěch. Pomocí dronu vlastní konstrukce snímáme městskou zeleň v RGB a NIR spektru, z čehož následně vypočítáváme NDVI index zdraví vegetace.",
-      en: "The AirVision project monitors the health of greenery in Jiráskovy sady park in Hradec Králové. Using a custom-built drone, we capture urban greenery in RGB and NIR spectra, from which we calculate the NDVI vegetation health index.",
+      en: "The AirVision project monitors the health of tree-lined avenues in cities. Using a custom-built drone, we capture urban greenery in RGB and NIR spectra, from which we calculate the NDVI vegetation health index.",
     },
     p2: {
       cs: "Oproti satelitním snímkům dosahujeme mnohonásobně vyššího rozlišení – pixely na centimetr oproti metrům na pixel. To nám umožňuje identifikovat problémy jednotlivých stromů, které by ze satelitu nebyly viditelné.",
