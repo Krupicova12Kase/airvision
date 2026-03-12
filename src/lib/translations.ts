@@ -28,7 +28,7 @@ export const t = {
     },
     p2: {
       cs: "Oproti satelitním snímkům dosahujeme mnohonásobně vyššího rozlišení – pixely na centimetr oproti metrům na pixel. To nám umožňuje identifikovat problémy jednotlivých stromů, které by ze satelitu nebyly viditelné.",
-      en: "Compared to satellite images, we achieve significantly higher resolution — pixels measured in centimeters versus meters. This allows us to identify issues with individual trees that would be invisible from satellite imagery.",
+      en: "Compared to satellite images, we achieve significantly higher resolution — pixels per centimeter versus meters per pixel. This allows us to identify issues with individual trees that would be invisible from satellite imagery.",
     },
     p3: {
       cs: "Projekt vzniká v rámci soutěže Tvořivá klávesnice na Prvním soukromém jazykovém gymnáziu v Hradci Králové a jeho část byla prezentována na mezinárodním summitu Climate Detectives pořádaném Evropskou vesmírnou agenturou (ESA) v Itálii.",
