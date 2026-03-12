@@ -167,22 +167,22 @@ export const t = {
     ],
   },
   collaboration: {
-    title: { cs: "Spolupráce", en: "Collaboration" },
+    title: { cs: "Spolupráce a povolení", en: "Collaboration & Permits" },
     items: [
       {
         cs: "Odbor městské ekologie města Hradce Králové",
         en: "Department of Urban Ecology, City of Hradec Králové",
-        url: "https://www.hradeckralove.org/zivotni-prostredi/mestska-zelen",
+        url: "https://www.hradeckralove.org/odbor-mestske-ekologie/ms-38569/p1=38588",
       },
       {
-        cs: "Povolení ÚCL v kategorii Specific",
-        en: "Civil Aviation Authority permit in Specific category",
+        cs: "Povolení ÚCL",
+        en: "Civil Aviation Authority permit",
         url: "https://www.caa.cz/",
       },
       {
-        cs: "Evropská vesmírná agentura (ESA) – Climate Detectives",
-        en: "European Space Agency (ESA) – Climate Detectives",
-        url: "https://www.esa.int/Education/Climate_Detectives",
+        cs: "Evropská vesmírná agentura (ESA)",
+        en: "European Space Agency (ESA)",
+        url: "https://www.esa.int/",
       },
     ],
   },
