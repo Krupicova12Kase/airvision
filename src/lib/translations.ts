@@ -12,7 +12,7 @@ export const t = {
   hero: {
     subtitle: {
       cs: "Monitorování zdravotního stavu městských alejí",
-      en: "Monitoring Urban Greenery Health",
+      en: "Monitoring Urban Tree-Lined Avenue Health",
     },
     description: {
       cs: "Využíváme drony vlastní konstrukce s NDVI analýzou pro přesné hodnocení zdraví alejí v Hradci Králové.",
