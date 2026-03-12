@@ -6,6 +6,7 @@ export const t = {
     technology: { cs: "Technologie", en: "Technology" },
     results: { cs: "Výsledky", en: "Results" },
     team: { cs: "Tým", en: "Team" },
+    collaboration: { cs: "Spolupráce", en: "Collaboration" },
     contact: { cs: "Kontakt", en: "Contact" },
   },
   hero: {
@@ -143,6 +144,14 @@ export const t = {
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
       {
+        name: "Jacob Jurjen Duintjer Tebbens",
+        role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
+      },
+      {
+        name: "Lukáš Zimčík",
+        role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
+      },
+      {
         name: "Mgr. Blanka Žitná",
         role: { cs: "Vedoucí práce", en: "Supervisor" },
       },
@@ -168,6 +177,12 @@ export const t = {
         en: "European Space Agency (ESA) – Climate Detectives",
       },
     ],
+  },
+  contact: {
+    title: { cs: "Kontakt", en: "Contact" },
+    supervisorLabel: { cs: "Vedoucí práce", en: "Supervisor" },
+    supervisorName: "Mgr. Blanka Žitná",
+    email: "zitna.blanka@1sjg.cz",
   },
   footer: {
     school: "1. soukromé jazykové gymnázium Hradec Králové",
