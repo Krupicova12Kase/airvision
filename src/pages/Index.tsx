@@ -85,7 +85,7 @@ const Index = () => {
       <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 md:px-6">
           <div className="flex items-center gap-3">
-            <span className="font-display text-lg font-bold text-primary md:text-xl">AirVision</span>
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg font-bold text-primary md:text-xl hover:text-secondary transition-colors">AirVision</a>
           </div>
 
           {/* Desktop nav */}
