@@ -49,7 +49,7 @@ const ScrollReveal = ({
 };
 
 const Index = () => {
-  const [lang, setLang] = useState<Lang>("cs");
+  const [lang, setLang] = useState<Lang>("en");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const techIcons = [
