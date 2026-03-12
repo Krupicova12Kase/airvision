@@ -145,7 +145,7 @@ export const t = {
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
       {
-        name: "Jacob Jurjen Duintjer Tebbens",
+        name: "Jacob Tebbens",
         initials: "JT",
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
