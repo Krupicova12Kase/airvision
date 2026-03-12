@@ -16,7 +16,7 @@ export const t = {
     },
     description: {
       cs: "Využíváme drony vlastní konstrukce s NDVI analýzou pro přesné hodnocení zdraví alejí v Hradci Králové.",
-      en: "Using custom-built drones with NDVI analysis for precise health assessment of trees and shrubs in Hradec Králové.",
+      en: "Using custom-built drones with NDVI analysis for precise health assessment of tree-lined avenues in Hradec Králové.",
     },
     cta: { cs: "Zjistit více", en: "Learn More" },
   },
