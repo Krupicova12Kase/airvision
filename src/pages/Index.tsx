@@ -49,7 +49,7 @@ const ScrollReveal = ({
 };
 
 const Index = () => {
-  const [lang, setLang] = useState<Lang>("cs");
+  const [lang, setLang] = useState<Lang>("en");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const techIcons = [
@@ -85,7 +85,7 @@ const Index = () => {
       <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 md:px-6">
           <div className="flex items-center gap-3">
-            <span className="font-display text-lg font-bold text-primary md:text-xl">AirVision</span>
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-display text-lg font-bold text-primary md:text-xl hover:text-secondary transition-colors">AirVision</a>
           </div>
 
           {/* Desktop nav */}
@@ -200,7 +200,7 @@ const Index = () => {
             <div className="mx-auto mt-6 flex max-w-xs items-center justify-center gap-2 sm:max-w-lg md:mt-8">
               {[
                 { label: "-1", color: "bg-red-600" },
-                { label: "0", color: "bg-yellow-500" },
+                { label: "0", color: "bg-amber-300" },
                 { label: "+1", color: "bg-green-600" },
               ].map((item) => (
                 <div key={item.label} className="flex-1">

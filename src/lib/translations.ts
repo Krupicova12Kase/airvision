@@ -81,21 +81,21 @@ export const t = {
     },
     items: [
       {
-        title: { cs: "Snímek 1 – Celkový stav", en: "Image 1 – Overall Condition" },
+        title: { cs: "Celkový stav", en: "Overall Condition" },
         desc: {
           cs: "Velmi obstojný stav bez nutnosti zásahu. Traviny s možností menšího stresování.",
           en: "Very satisfactory condition with no intervention needed. Minor stress possible in grasses.",
         },
       },
       {
-        title: { cs: "Snímek 3 – Choré stromy", en: "Image 3 – Diseased Trees" },
+        title: { cs: "Choré stromy", en: "Diseased Trees" },
         desc: {
           cs: "Traviny ve vynikajícím stavu, ale pravděpodobná choroba stromu identifikována díky NDVI.",
           en: "Grasses in excellent condition, but probable tree disease identified through NDVI.",
         },
       },
       {
-        title: { cs: "Snímek 5 – Stresované koruny", en: "Image 5 – Stressed Canopies" },
+        title: { cs: "Stresované koruny", en: "Stressed Canopies" },
         desc: {
           cs: "Nestresované traviny a nižší části, ale stresované koruny stromů bez známého důvodu.",
           en: "Unstressed grasses and lower sections, but stressed tree canopies without known cause.",
