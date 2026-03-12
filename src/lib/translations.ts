@@ -12,11 +12,11 @@ export const t = {
   hero: {
     subtitle: {
       cs: "Monitorování zdravotního stavu městských alejí",
-      en: "Monitoring Urban Greenery Health",
+      en: "Monitoring Urban Tree-Lined Avenue Health",
     },
     description: {
       cs: "Využíváme drony vlastní konstrukce s NDVI analýzou pro přesné hodnocení zdraví alejí v Hradci Králové.",
-      en: "Using custom-built drones with NDVI analysis for precise health assessment of trees and shrubs in Hradec Králové.",
+      en: "Using custom-built drones with NDVI analysis for precise health assessment of tree-lined avenues in Hradec Králové.",
     },
     cta: { cs: "Zjistit více", en: "Learn More" },
   },
@@ -24,15 +24,15 @@ export const t = {
     title: { cs: "O projektu", en: "About the Project" },
     p1: {
       cs: "Projekt AirVision se zabývá monitorováním zdravotního stavu alejí ve městěch. Pomocí dronu vlastní konstrukce snímáme městskou zeleň v RGB a NIR spektru, z čehož následně vypočítáváme NDVI index zdraví vegetace.",
-      en: "The AirVision project monitors the health of greenery in Jiráskovy sady park in Hradec Králové. Using a custom-built drone, we capture urban greenery in RGB and NIR spectra, from which we calculate the NDVI vegetation health index.",
+      en: "The AirVision project monitors the health of tree-lined avenues in cities. Using a custom-built drone, we capture urban greenery in RGB and NIR spectra, from which we calculate the NDVI vegetation health index.",
     },
     p2: {
       cs: "Oproti satelitním snímkům dosahujeme mnohonásobně vyššího rozlišení – pixely na centimetr oproti metrům na pixel. To nám umožňuje identifikovat problémy jednotlivých stromů, které by ze satelitu nebyly viditelné.",
-      en: "Compared to satellite images, we achieve significantly higher resolution — pixels measured in centimeters versus meters. This allows us to identify issues with individual trees that would be invisible from satellite imagery.",
+      en: "Compared to satellite images, we achieve significantly higher resolution — pixels per centimeter versus meters per pixel. This allows us to identify issues with individual trees that would be invisible from satellite imagery.",
     },
     p3: {
       cs: "Projekt vzniká v rámci soutěže Tvořivá klávesnice na Prvním soukromém jazykovém gymnáziu v Hradci Králové a jeho část byla prezentována na mezinárodním summitu Climate Detectives pořádaném Evropskou vesmírnou agenturou (ESA) v Itálii.",
-      en: "The project was created as part of the Tvořivá klávesnice competition at the First Private Language Gymnasium in Hradec Králové and was presented at the international Climate Detectives summit organized by the European Space Agency (ESA) in Italy.",
+      en: "The project was created as part of the Tvořivá klávesnice competition at the First Private Language Gymnasium in Hradec Králové and part of it was presented at the international Climate Detectives summit organized by the European Space Agency (ESA) in Italy.",
     },
   },
   ndvi: {
@@ -77,7 +77,7 @@ export const t = {
     title: { cs: "Výsledky", en: "Results" },
     summary: {
       cs: "Monitorování Jiráskových sadů ukázalo, že naše metoda je to správné řešení pro městské aleje.",
-      en: "Monitoring of Jiráskovy sady park proved that the overall condition is very good and care is not neglected. The method was successfully verified for further use.",
+      en: "Monitoring of Jiráskovy sady park showed that our method is the right solution for urban tree-lined avenues.",
     },
     items: [
       {
