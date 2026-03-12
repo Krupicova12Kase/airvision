@@ -76,7 +76,7 @@ export const t = {
   results: {
     title: { cs: "Výsledky", en: "Results" },
     summary: {
-      cs: "Monitorování Jiráskových sadů prokázalo, že celkový stav parku je velmi dobrý a péče není zanedbaná. Metoda byla úspěšně ověřena pro další využití.",
+      cs: "Monitorování Jiráskových sadů ukázalo, že naše metoda je to správné řešení pro městské aleje.",
       en: "Monitoring of Jiráskovy sady park proved that the overall condition is very good and care is not neglected. The method was successfully verified for further use.",
     },
     items: [
