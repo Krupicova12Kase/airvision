@@ -200,7 +200,7 @@ const Index = () => {
             <div className="mx-auto mt-6 flex max-w-xs items-center justify-center gap-2 sm:max-w-lg md:mt-8">
               {[
                 { label: "-1", color: "bg-red-600" },
-                { label: "0", color: "bg-yellow-500" },
+                { label: "0", color: "bg-amber-300" },
                 { label: "+1", color: "bg-green-600" },
               ].map((item) => (
                 <div key={item.label} className="flex-1">
