@@ -1,12 +1,24 @@
 import { useState } from "react";
 import { t, type Lang } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
+import ResultCard from "@/components/ResultCard";
 import heroBg from "@/assets/hero_bg.jpg";
 import dron1 from "@/assets/dron_1.jpeg";
 import dron2 from "@/assets/dron_2.jpeg";
 import schoolLogo from "@/assets/skolni_logo.png";
-import githubIcon from "@/assets/github.svg";
-import { Leaf, Camera, Code, CloudSun, Shield, Maximize, Wallet, Settings, ExternalLink } from "lucide-react";
+import result1Rgb from "@/assets/result1_rgb.jpg";
+import result1Ndvi from "@/assets/result1_ndvi.jpg";
+import result3Rgb from "@/assets/result3_rgb.jpg";
+import result3Ndvi from "@/assets/result3_ndvi.jpg";
+import result5Rgb from "@/assets/result5_rgb.jpg";
+import result5Ndvi from "@/assets/result5_ndvi.jpg";
+import { Leaf, Camera, Code, CloudSun, Shield, Maximize, Wallet, Settings, ExternalLink, Mail } from "lucide-react";
+
+const resultImages = [
+  { rgb: result1Rgb, ndvi: result1Ndvi },
+  { rgb: result3Rgb, ndvi: result3Ndvi },
+  { rgb: result5Rgb, ndvi: result5Ndvi },
+];
 
 const Index = () => {
   const [lang, setLang] = useState<Lang>("cs");
@@ -47,9 +59,6 @@ const Index = () => {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <a href="https://github.com/Krupicova12Kase/monitorovani-aleji-hk" target="_blank" rel="noopener noreferrer">
-              <img src={githubIcon} alt="GitHub" className="h-6 w-6 opacity-70 transition-opacity hover:opacity-100" />
-            </a>
             <a href="https://1sjg.cz/" target="_blank" rel="noopener noreferrer">
               <img src={schoolLogo} alt="1.SJG" className="h-7 w-7" />
             </a>
@@ -212,15 +221,15 @@ const Index = () => {
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {t.results.items.map((item, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-bold">
-                  {i + 1}
-                </div>
-                <h3 className="font-display text-lg font-bold text-primary">
-                  {item.title[lang]}
-                </h3>
-                <p className="mt-2 text-foreground/70">{item.desc[lang]}</p>
-              </div>
+              <ResultCard
+                key={i}
+                index={i + 1}
+                title={item.title}
+                desc={item.desc}
+                rgbImage={resultImages[i].rgb}
+                ndviImage={resultImages[i].ndvi}
+                lang={lang}
+              />
             ))}
           </div>
         </div>
@@ -232,7 +241,7 @@ const Index = () => {
           <h2 className="text-center font-display text-4xl font-bold text-primary-foreground md:text-5xl">
             {t.team.title[lang]}
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-3 lg:grid-cols-5">
             {t.team.members.map((member, i) => (
               <div
                 key={i}
@@ -241,10 +250,10 @@ const Index = () => {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent/30 font-display text-2xl font-bold text-accent">
                   {member.name.charAt(0)}
                 </div>
-                <h3 className="font-display text-xl font-bold text-primary-foreground">
+                <h3 className="font-display text-lg font-bold text-primary-foreground">
                   {member.name}
                 </h3>
-                <p className="mt-2 text-primary-foreground/70">{member.role[lang]}</p>
+                <p className="mt-2 text-sm text-primary-foreground/70">{member.role[lang]}</p>
               </div>
             ))}
           </div>
@@ -252,7 +261,7 @@ const Index = () => {
       </section>
 
       {/* Collaboration */}
-      <section id="contact" className="py-24">
+      <section id="collaboration" className="py-24">
         <div className="container mx-auto px-6">
           <h2 className="text-center font-display text-4xl font-bold text-primary md:text-5xl">
             {t.collaboration.title[lang]}
@@ -268,6 +277,30 @@ const Index = () => {
                 <p className="font-medium text-foreground">{item[lang]}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-card py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-center font-display text-4xl font-bold text-primary md:text-5xl">
+            {t.contact.title[lang]}
+          </h2>
+          <div className="section-divider mt-4" />
+          <div className="mx-auto mt-12 max-w-md rounded-2xl border border-border bg-background p-8 text-center shadow-sm">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
+              <Mail className="h-7 w-7 text-warm" />
+            </div>
+            <p className="text-sm font-medium text-foreground/60">{t.contact.supervisorLabel[lang]}</p>
+            <h3 className="mt-1 font-display text-xl font-bold text-primary">{t.contact.supervisorName}</h3>
+            <a
+              href={`mailto:${t.contact.email}`}
+              className="mt-3 inline-flex items-center gap-2 text-lg font-medium text-secondary transition-colors hover:text-warm"
+            >
+              <Mail className="h-4 w-4" />
+              {t.contact.email}
+            </a>
           </div>
         </div>
       </section>
