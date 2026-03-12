@@ -6,7 +6,7 @@ export const t = {
     technology: { cs: "Technologie", en: "Technology" },
     results: { cs: "Výsledky", en: "Results" },
     team: { cs: "Tým", en: "Team" },
-    collaboration: { cs: "Spolupráce", en: "Collaboration" },
+    collaboration: { cs: "Spolupráce a povolení", en: "Collaboration & Permits" },
     contact: { cs: "Kontakt", en: "Contact" },
   },
   hero: {
