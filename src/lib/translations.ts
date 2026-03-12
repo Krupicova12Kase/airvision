@@ -141,22 +141,27 @@ export const t = {
     members: [
       {
         name: "Maxmilian Kunc",
+        initials: "MK",
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
       {
         name: "Jacob Jurjen Duintjer Tebbens",
+        initials: "JT",
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
       {
         name: "Lukáš Zimčík",
+        initials: "LZ",
         role: { cs: "Autor projektu, student 2.F", en: "Project Author, 2.F student" },
       },
       {
         name: "Mgr. Blanka Žitná",
+        initials: "BŽ",
         role: { cs: "Vedoucí práce", en: "Supervisor" },
       },
       {
         name: "Martin Žitný",
+        initials: "MŽ",
         role: { cs: "Odborný konzultant", en: "Technical Consultant" },
       },
     ],
@@ -167,14 +172,17 @@ export const t = {
       {
         cs: "Odbor městské ekologie města Hradce Králové",
         en: "Department of Urban Ecology, City of Hradec Králové",
+        url: "https://www.hradeckralove.org/zivotni-prostredi/mestska-zelen",
       },
       {
         cs: "Povolení ÚCL v kategorii Specific",
         en: "Civil Aviation Authority permit in Specific category",
+        url: "https://www.caa.cz/",
       },
       {
         cs: "Evropská vesmírná agentura (ESA) – Climate Detectives",
         en: "European Space Agency (ESA) – Climate Detectives",
+        url: "https://www.esa.int/Education/Climate_Detectives",
       },
     ],
   },
