@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { t, type Lang } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
-import ResultCard from "@/components/ResultCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroBg from "@/assets/hero_bg.jpg";
 import dron1 from "@/assets/dron_1.jpeg";
-import dron2 from "@/assets/dron_2.jpeg";
 import schoolLogo from "@/assets/skolni_logo.png";
 import result1Rgb from "@/assets/result1_rgb.jpg";
 import result1Ndvi from "@/assets/result1_ndvi.jpg";
-import result3Rgb from "@/assets/result3_rgb.jpg";
-import result3Ndvi from "@/assets/result3_ndvi.jpg";
+import result2Rgb from "@/assets/result2_rgb.png";
+import result2Ndvi from "@/assets/result2_ndvi.png";
 import result5Rgb from "@/assets/result5_rgb.jpg";
 import result5Ndvi from "@/assets/result5_ndvi.jpg";
 import {
@@ -21,7 +19,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 
 const resultImages = [
   { rgb: result1Rgb, ndvi: result1Ndvi },
-  { rgb: result3Rgb, ndvi: result3Ndvi },
+  { rgb: result2Rgb, ndvi: result2Ndvi },
   { rgb: result5Rgb, ndvi: result5Ndvi },
 ];
 
@@ -248,34 +246,26 @@ const Index = () => {
       {/* Advantages */}
       <section className="bg-card py-14 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <ScrollReveal animation="scroll-slide-left">
-              <img src={dron2} alt="NDVI analysis" className="w-full rounded-2xl shadow-xl" />
-            </ScrollReveal>
-            <div>
-              <ScrollReveal>
-                <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl md:text-4xl">
-                  {t.advantages.title[lang]}
-                </h2>
+          <ScrollReveal>
+            <h2 className="text-center font-display text-2xl font-bold text-primary sm:text-3xl md:text-4xl">
+              {t.advantages.title[lang]}
+            </h2>
+            <div className="section-divider mt-4" />
+          </ScrollReveal>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-12">
+            {t.advantages.items.map((item, i) => (
+              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
+                <div className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-background p-5 text-center shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 md:p-6">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-warm transition-colors group-hover:bg-accent group-hover:text-accent-foreground md:h-14 md:w-14">
+                    {advIcons[i]}
+                  </div>
+                  <h4 className="font-display text-base font-bold text-primary md:text-lg">
+                    {item.title[lang]}
+                  </h4>
+                  <p className="text-sm text-foreground/70 md:text-base">{item.desc[lang]}</p>
+                </div>
               </ScrollReveal>
-              <div className="mt-6 space-y-5 md:mt-8 md:space-y-6">
-                {t.advantages.items.map((item, i) => (
-                  <ScrollReveal key={i} animation="scroll-slide-right" delay={`scroll-delay-${(i + 1) * 100}` as any}>
-                    <div className="flex gap-3 md:gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-warm md:h-12 md:w-12">
-                        {advIcons[i]}
-                      </div>
-                      <div>
-                        <h4 className="font-display text-base font-bold text-primary md:text-lg">
-                          {item.title[lang]}
-                        </h4>
-                        <p className="mt-1 text-sm text-foreground/70 md:text-base">{item.desc[lang]}</p>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -294,17 +284,49 @@ const Index = () => {
               {t.results.summary[lang]}
             </p>
           </ScrollReveal>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
-            {t.results.items.map((item, i) => (
-              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
-                <ResultCard
-                  index={i + 1}
-                  title={item.title}
-                  desc={item.desc}
-                  rgbImage={resultImages[i].rgb}
-                  ndviImage={resultImages[i].ndvi}
-                  lang={lang}
-                />
+
+          {/* Featured result (index 1 = "Diseased Trees") */}
+          <ScrollReveal animation="scroll-scale-up" delay="scroll-delay-200">
+            <div className="mx-auto mt-10 max-w-5xl rounded-3xl border-2 border-accent/30 bg-card p-6 shadow-xl md:mt-14 md:p-10">
+              <h3 className="text-center font-display text-xl font-bold text-primary md:text-2xl lg:text-3xl">
+                {t.results.items[1].title[lang]}
+              </h3>
+              <p className="mx-auto mt-3 max-w-2xl text-center text-foreground/70 md:text-lg">
+                {t.results.items[1].desc[lang]}
+              </p>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-8 md:gap-6">
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <img src={resultImages[1].rgb} alt="RGB" className="w-full object-cover aspect-[4/3]" />
+                  <div className="bg-primary/10 py-2 text-center text-sm font-semibold text-primary">RGB</div>
+                </div>
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <img src={resultImages[1].ndvi} alt="NDVI" className="w-full object-cover aspect-[4/3]" />
+                  <div className="bg-accent/20 py-2 text-center text-sm font-semibold text-warm">NDVI</div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Secondary results */}
+          <div className="mx-auto mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
+            {[0, 2].map((idx) => (
+              <ScrollReveal key={idx} animation="scroll-fade-up" delay={`scroll-delay-${(idx + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] max-w-md">
+                <div className="rounded-2xl border border-border bg-card p-5 shadow-sm text-center">
+                  <h3 className="font-display text-lg font-bold text-primary">
+                    {t.results.items[idx].title[lang]}
+                  </h3>
+                  <p className="mt-2 text-sm text-foreground/70">{t.results.items[idx].desc[lang]}</p>
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    <div>
+                      <img src={resultImages[idx].rgb} alt="RGB" className="w-full rounded-lg object-cover aspect-[4/3]" />
+                      <p className="mt-1 text-xs text-foreground/50">RGB</p>
+                    </div>
+                    <div>
+                      <img src={resultImages[idx].ndvi} alt="NDVI" className="w-full rounded-lg object-cover aspect-[4/3]" />
+                      <p className="mt-1 text-xs text-foreground/50">NDVI</p>
+                    </div>
+                  </div>
+                </div>
               </ScrollReveal>
             ))}
           </div>
