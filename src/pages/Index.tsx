@@ -319,7 +319,7 @@ const Index = () => {
               {t.team.title[lang]}
             </h2>
           </ScrollReveal>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-12 md:gap-8 lg:grid-cols-5">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:mt-12 md:gap-8">
             {t.team.members.map((member, i) => (
               <ScrollReveal key={i} animation="scroll-scale-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
                 <div className="rounded-2xl bg-secondary/20 p-4 text-center backdrop-blur sm:p-6 md:p-8">
