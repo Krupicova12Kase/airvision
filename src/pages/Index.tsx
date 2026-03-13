@@ -246,34 +246,26 @@ const Index = () => {
       {/* Advantages */}
       <section className="bg-card py-14 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <ScrollReveal animation="scroll-slide-left">
-              <img src={dron2} alt="NDVI analysis" className="w-full rounded-2xl shadow-xl" />
-            </ScrollReveal>
-            <div>
-              <ScrollReveal>
-                <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl md:text-4xl">
-                  {t.advantages.title[lang]}
-                </h2>
+          <ScrollReveal>
+            <h2 className="text-center font-display text-2xl font-bold text-primary sm:text-3xl md:text-4xl">
+              {t.advantages.title[lang]}
+            </h2>
+            <div className="section-divider mt-4" />
+          </ScrollReveal>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-12">
+            {t.advantages.items.map((item, i) => (
+              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
+                <div className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-background p-5 text-center shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 md:p-6">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-warm transition-colors group-hover:bg-accent group-hover:text-accent-foreground md:h-14 md:w-14">
+                    {advIcons[i]}
+                  </div>
+                  <h4 className="font-display text-base font-bold text-primary md:text-lg">
+                    {item.title[lang]}
+                  </h4>
+                  <p className="text-sm text-foreground/70 md:text-base">{item.desc[lang]}</p>
+                </div>
               </ScrollReveal>
-              <div className="mt-6 space-y-5 md:mt-8 md:space-y-6">
-                {t.advantages.items.map((item, i) => (
-                  <ScrollReveal key={i} animation="scroll-slide-right" delay={`scroll-delay-${(i + 1) * 100}` as any}>
-                    <div className="flex gap-3 md:gap-4">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-warm md:h-12 md:w-12">
-                        {advIcons[i]}
-                      </div>
-                      <div>
-                        <h4 className="font-display text-base font-bold text-primary md:text-lg">
-                          {item.title[lang]}
-                        </h4>
-                        <p className="mt-1 text-sm text-foreground/70 md:text-base">{item.desc[lang]}</p>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
