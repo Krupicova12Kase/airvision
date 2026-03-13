@@ -284,17 +284,49 @@ const Index = () => {
               {t.results.summary[lang]}
             </p>
           </ScrollReveal>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
-            {t.results.items.map((item, i) => (
-              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
-                <ResultCard
-                  index={i + 1}
-                  title={item.title}
-                  desc={item.desc}
-                  rgbImage={resultImages[i].rgb}
-                  ndviImage={resultImages[i].ndvi}
-                  lang={lang}
-                />
+
+          {/* Featured result (index 1 = "Diseased Trees") */}
+          <ScrollReveal animation="scroll-scale-up" delay="scroll-delay-200">
+            <div className="mx-auto mt-10 max-w-5xl rounded-3xl border-2 border-accent/30 bg-card p-6 shadow-xl md:mt-14 md:p-10">
+              <h3 className="text-center font-display text-xl font-bold text-primary md:text-2xl lg:text-3xl">
+                {t.results.items[1].title[lang]}
+              </h3>
+              <p className="mx-auto mt-3 max-w-2xl text-center text-foreground/70 md:text-lg">
+                {t.results.items[1].desc[lang]}
+              </p>
+              <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-8 md:gap-6">
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <img src={resultImages[1].rgb} alt="RGB" className="w-full object-cover aspect-[4/3]" />
+                  <div className="bg-primary/10 py-2 text-center text-sm font-semibold text-primary">RGB</div>
+                </div>
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <img src={resultImages[1].ndvi} alt="NDVI" className="w-full object-cover aspect-[4/3]" />
+                  <div className="bg-accent/20 py-2 text-center text-sm font-semibold text-warm">NDVI</div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Secondary results */}
+          <div className="mx-auto mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
+            {[0, 2].map((idx) => (
+              <ScrollReveal key={idx} animation="scroll-fade-up" delay={`scroll-delay-${(idx + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] max-w-md">
+                <div className="rounded-2xl border border-border bg-card p-5 shadow-sm text-center">
+                  <h3 className="font-display text-lg font-bold text-primary">
+                    {t.results.items[idx].title[lang]}
+                  </h3>
+                  <p className="mt-2 text-sm text-foreground/70">{t.results.items[idx].desc[lang]}</p>
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    <div>
+                      <img src={resultImages[idx].rgb} alt="RGB" className="w-full rounded-lg object-cover aspect-[4/3]" />
+                      <p className="mt-1 text-xs text-foreground/50">RGB</p>
+                    </div>
+                    <div>
+                      <img src={resultImages[idx].ndvi} alt="NDVI" className="w-full rounded-lg object-cover aspect-[4/3]" />
+                      <p className="mt-1 text-xs text-foreground/50">NDVI</p>
+                    </div>
+                  </div>
+                </div>
               </ScrollReveal>
             ))}
           </div>
