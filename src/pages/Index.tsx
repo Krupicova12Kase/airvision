@@ -1,3 +1,4 @@
+/* rebuilt */
 import { useState } from "react";
 import { t, type Lang } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
