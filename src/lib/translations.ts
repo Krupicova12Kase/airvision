@@ -32,7 +32,7 @@ export const t = {
     },
     p3: {
       cs: "Projekt vzniká v rámci soutěže Tvořivá klávesnice na Prvním soukromém jazykovém gymnáziu v Hradci Králové a jeho část byla prezentována na mezinárodním summitu Climate Detectives pořádaném Evropskou vesmírnou agenturou (ESA) v Itálii.",
-      en: "The project was created as part of the Tvořivá klávesnice competition at the First Private Language Gymnasium in Hradec Králové and part of it was presented at the international Climate Detectives summit organized by the European Space Agency (ESA) in Italy.",
+      en: "The project was created as part of the Tvořivá klávesnice competition at the First Private Language School in Hradec Králové and part of it was presented at the international Climate Detectives summit organized by the European Space Agency (ESA) in Italy.",
     },
   },
   ndvi: {
