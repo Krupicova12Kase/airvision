@@ -15,7 +15,7 @@ import result5Rgb from "@/assets/result5_rgb.jpg";
 import result5Ndvi from "@/assets/result5_ndvi.jpg";
 import {
   Leaf, Camera, Code, CloudSun, Shield, Maximize, Wallet, Settings,
-  ExternalLink, Mail, Menu, X
+  ExternalLink, Mail, Menu, X, Activity, Clock
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
@@ -64,6 +64,8 @@ const Index = () => {
     <Maximize className="h-5 w-5 md:h-6 md:w-6" />,
     <Wallet className="h-5 w-5 md:h-6 md:w-6" />,
     <Settings className="h-5 w-5 md:h-6 md:w-6" />,
+    <Activity className="h-5 w-5 md:h-6 md:w-6" />,
+    <Clock className="h-5 w-5 md:h-6 md:w-6" />,
   ];
 
   const techItems = [t.tech.drone, t.tech.cameras, t.tech.software, t.tech.weather];

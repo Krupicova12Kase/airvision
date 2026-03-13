@@ -11,8 +11,8 @@ interface ResultCardProps {
 
 const ResultCard = ({ index, title, desc, rgbImage, ndviImage, lang }: ResultCardProps) => {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-bold">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-sm text-center lg:text-left">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground font-bold mx-auto lg:mx-0">
         {index}
       </div>
       <h3 className="font-display text-lg font-bold text-primary">
