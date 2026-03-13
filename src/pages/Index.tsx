@@ -15,7 +15,7 @@ import result5Rgb from "@/assets/result5_rgb.jpg";
 import result5Ndvi from "@/assets/result5_ndvi.jpg";
 import {
   Leaf, Camera, Code, CloudSun, Shield, Maximize, Wallet, Settings,
-  ExternalLink, Mail, Menu, X
+  ExternalLink, Mail, Menu, X, Activity, Clock
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
