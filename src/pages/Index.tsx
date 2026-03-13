@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { t, type Lang } from "@/lib/translations";
 import LanguageToggle from "@/components/LanguageToggle";
-import ResultCard from "@/components/ResultCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroBg from "@/assets/hero_bg.jpg";
 import dron1 from "@/assets/dron_1.jpeg";
-import dron2 from "@/assets/dron_2.jpeg";
 import schoolLogo from "@/assets/skolni_logo.png";
 import result1Rgb from "@/assets/result1_rgb.jpg";
 import result1Ndvi from "@/assets/result1_ndvi.jpg";
-import result3Rgb from "@/assets/result3_rgb.jpg";
-import result3Ndvi from "@/assets/result3_ndvi.jpg";
+import result2Rgb from "@/assets/result2_rgb.png";
+import result2Ndvi from "@/assets/result2_ndvi.png";
 import result5Rgb from "@/assets/result5_rgb.jpg";
 import result5Ndvi from "@/assets/result5_ndvi.jpg";
 import {
@@ -21,7 +19,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 
 const resultImages = [
   { rgb: result1Rgb, ndvi: result1Ndvi },
-  { rgb: result3Rgb, ndvi: result3Ndvi },
+  { rgb: result2Rgb, ndvi: result2Ndvi },
   { rgb: result5Rgb, ndvi: result5Ndvi },
 ];
 
