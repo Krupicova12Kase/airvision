@@ -64,6 +64,8 @@ const Index = () => {
     <Maximize className="h-5 w-5 md:h-6 md:w-6" />,
     <Wallet className="h-5 w-5 md:h-6 md:w-6" />,
     <Settings className="h-5 w-5 md:h-6 md:w-6" />,
+    <Activity className="h-5 w-5 md:h-6 md:w-6" />,
+    <Clock className="h-5 w-5 md:h-6 md:w-6" />,
   ];
 
   const techItems = [t.tech.drone, t.tech.cameras, t.tech.software, t.tech.weather];
