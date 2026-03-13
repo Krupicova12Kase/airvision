@@ -109,29 +109,43 @@ export const t = {
       {
         title: { cs: "Bezpečnost", en: "Safety" },
         desc: {
-          cs: "Dron o hmotnosti 2 kg je výrazně bezpečnější pro provoz v obydlených oblastech.",
-          en: "A 2 kg drone is significantly safer for operation in populated areas.",
+          cs: "Dron o hmotnosti 2 kg oproti 10–15 kg u komerčních řešení. Vestavěný FTS umožňuje řízené přistání místo pádu. Malé vrtule nepoškozují zeleň ani neovlivňují snímkování. Není nutné uzavírat zónu snímkování.",
+          en: "A 2 kg drone versus 10–15 kg commercial solutions. Built-in FTS enables controlled landing instead of a crash. Small rotors don't damage greenery or affect imaging. No need to close off the monitoring zone.",
         },
       },
       {
         title: { cs: "Rozlišení", en: "Resolution" },
         desc: {
-          cs: "Pixely v řádu centimetrů oproti metrům u satelitních snímků.",
-          en: "Pixels measured in centimeters compared to meters in satellite imagery.",
+          cs: "Až 100× přesnější než satelitní snímkování – řády pixelů na 1 cm² oproti metrům na pixel u satelitů. Lze sledovat nejen každý strom zvlášť, ale i jednotlivé větve.",
+          en: "Up to 100× more precise than satellite imaging — pixels per cm² compared to meters per pixel from satellites. We can monitor not just individual trees, but even single branches.",
         },
       },
       {
         title: { cs: "Náklady", en: "Cost" },
         desc: {
-          cs: "Desítky tisíc korun oproti stovkám tisíc u komerčních řešení.",
-          en: "Tens of thousands CZK compared to hundreds of thousands for commercial solutions.",
+          cs: "Cca 50 tisíc Kč oproti půl milionu u komerčního snímkování. Nízké provozní náklady zpřístupňují službu i menším zadavatelům.",
+          en: "Approximately 50,000 CZK compared to ~500,000 CZK for commercial imaging. Low operating costs make the service accessible even to smaller clients.",
         },
       },
       {
         title: { cs: "Modularita", en: "Modularity" },
         desc: {
-          cs: "Možnost průběžně vylepšovat a upravovat dle aktuálních potřeb projektu.",
-          en: "Ability to continuously improve and modify according to current project needs.",
+          cs: "Výměnné objektivy, snímače, rotory i baterie. Dron lze přizpůsobit přesně potřebám konkrétního monitorování – to u komerčních dronů není možné.",
+          en: "Interchangeable lenses, sensors, rotors, and batteries. The drone can be tailored precisely to specific monitoring needs — something commercial drones cannot offer.",
+        },
+      },
+      {
+        title: { cs: "NDVI v reálném čase", en: "Real-Time NDVI" },
+        desc: {
+          cs: "Palubní počítač generuje NDVI snímky přímo za letu. Operátor okamžitě vidí výsledky a může snímek zopakovat – u komerčních dronů se NDVI zpracovává až dodatečně.",
+          en: "On-board computer generates NDVI images during flight. The operator sees results instantly and can retake images — commercial drones process NDVI only after landing.",
+        },
+      },
+      {
+        title: { cs: "Snímkování na vyžádání", en: "On-Demand Monitoring" },
+        desc: {
+          cs: "Monitorování lze realizovat v době skutečné potřeby, nikoliv pouze při přeletu satelitu. Trasu letu lze naprogramovat tak, aby byla vždy totožná pro porovnání v čase.",
+          en: "Monitoring can be performed when actually needed, not only during satellite flyovers. Flight paths can be programmed identically for consistent time-series comparison.",
         },
       },
     ],
