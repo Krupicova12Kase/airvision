@@ -294,9 +294,9 @@ const Index = () => {
               {t.results.summary[lang]}
             </p>
           </ScrollReveal>
-          <div className="mt-8 grid gap-6 justify-items-center sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
             {t.results.items.map((item, i) => (
-              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
+              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
                 <ResultCard
                   index={i + 1}
                   title={item.title}
