@@ -294,7 +294,7 @@ const Index = () => {
               {t.results.summary[lang]}
             </p>
           </ScrollReveal>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 justify-items-center sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
             {t.results.items.map((item, i) => (
               <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
                 <ResultCard
