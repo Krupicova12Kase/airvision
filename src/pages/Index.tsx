@@ -294,9 +294,9 @@ const Index = () => {
               {t.results.summary[lang]}
             </p>
           </ScrollReveal>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 md:mt-12 lg:grid-cols-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-6 md:mt-12">
             {t.results.items.map((item, i) => (
-              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
+              <ScrollReveal key={i} animation="scroll-fade-up" delay={`scroll-delay-${(i + 1) * 100}` as any} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
                 <ResultCard
                   index={i + 1}
                   title={item.title}
@@ -319,10 +319,10 @@ const Index = () => {
               {t.team.title[lang]}
             </h2>
           </ScrollReveal>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-12 md:gap-8 lg:grid-cols-5">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:mt-12 md:gap-8">
             {t.team.members.map((member, i) => (
               <ScrollReveal key={i} animation="scroll-scale-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
-                <div className="rounded-2xl bg-secondary/20 p-4 text-center backdrop-blur sm:p-6 md:p-8">
+                <div className="w-36 rounded-2xl bg-secondary/20 p-4 text-center backdrop-blur sm:w-44 sm:p-6 md:w-48 md:p-8">
                   <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/30 font-display text-lg font-bold text-accent sm:h-14 sm:w-14 sm:text-xl md:mb-4 md:h-16 md:w-16 md:text-2xl">
                     {member.initials}
                   </div>
