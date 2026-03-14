@@ -302,7 +302,7 @@ const Index = () => {
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img src={resultImages[1].ndvi} alt="NDVI" className="w-full object-cover aspect-[4/3]" />
-                  <div className="bg-accent/20 py-2 text-center text-sm font-semibold text-warm">NDVI</div>
+                  <div className="bg-primary/10 py-2 text-center text-sm font-semibold text-primary">NDVI</div>
                 </div>
               </div>
             </div>
