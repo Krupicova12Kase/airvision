@@ -302,7 +302,7 @@ const Index = () => {
                 </div>
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img src={resultImages[1].ndvi} alt="NDVI" className="w-full object-cover aspect-[4/3]" />
-                  <div className="bg-accent/20 py-2 text-center text-sm font-semibold text-warm">NDVI</div>
+                  <div className="bg-primary/10 py-2 text-center text-sm font-semibold text-primary">NDVI</div>
                 </div>
               </div>
             </div>
@@ -342,17 +342,17 @@ const Index = () => {
               {t.team.title[lang]}
             </h2>
           </ScrollReveal>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 md:mt-12 md:gap-8">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-12 md:grid-cols-5 md:gap-6 max-w-4xl mx-auto">
             {t.team.members.map((member, i) => (
               <ScrollReveal key={i} animation="scroll-scale-up" delay={`scroll-delay-${(i + 1) * 100}` as any}>
-                <div className="w-36 rounded-2xl bg-secondary/20 p-4 text-center backdrop-blur sm:w-44 sm:p-6 md:w-48 md:p-8">
-                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent/30 font-display text-lg font-bold text-accent sm:h-14 sm:w-14 sm:text-xl md:mb-4 md:h-16 md:w-16 md:text-2xl">
+                <div className="rounded-2xl bg-secondary/20 p-4 text-center backdrop-blur sm:p-5 md:p-6">
+                  <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-accent/30 font-display text-lg font-bold text-accent md:mb-4">
                     {member.initials}
                   </div>
-                  <h3 className="font-display text-sm font-bold text-primary-foreground sm:text-base md:text-lg">
+                  <h3 className="font-display text-sm font-bold text-primary-foreground md:text-base">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-xs text-primary-foreground/70 sm:text-sm md:mt-2">{member.role[lang]}</p>
+                  <p className="mt-1 text-xs text-primary-foreground/70 md:mt-2 md:text-sm">{member.role[lang]}</p>
                 </div>
               </ScrollReveal>
             ))}
